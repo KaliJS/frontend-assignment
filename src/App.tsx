@@ -18,8 +18,10 @@ const App = () => {
         const response = await fetch(apiURL);
         const result = await response.json();
         setData(result);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(false);
       }
     };
     fetchData();
