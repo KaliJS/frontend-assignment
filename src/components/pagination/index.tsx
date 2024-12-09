@@ -9,14 +9,13 @@ interface PaginationProps {
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const pageNumbers = [];
 
-  // Show the previous page and next page around the current page
   const startPage = Math.max(1, currentPage - 1);
   const endPage = Math.min(totalPages, currentPage + 1);
 
   if (currentPage > 2) {
-    pageNumbers.push(1); // Always show the first page
+    pageNumbers.push(1);
     if (startPage > 2) {
-      pageNumbers.push("..."); // Add "..." if there are pages before the startPage
+      pageNumbers.push("...");
     }
   }
 
@@ -26,9 +25,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   if (currentPage < totalPages - 1) {
     if (endPage < totalPages - 1) {
-      pageNumbers.push("..."); // Add "..." if there are pages after the endPage
+      pageNumbers.push("...");
     }
-    pageNumbers.push(totalPages); // Always show the last page
+    pageNumbers.push(totalPages);
   }
 
   return (
