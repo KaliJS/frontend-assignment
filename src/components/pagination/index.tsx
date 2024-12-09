@@ -8,7 +8,6 @@ interface PaginationProps {
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const pageNumbers = [];
-  const maxVisiblePages = 3; // Show 3 pages at a time
 
   // Show the previous page and next page around the current page
   const startPage = Math.max(1, currentPage - 1);
