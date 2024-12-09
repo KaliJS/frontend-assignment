@@ -1,14 +1,16 @@
-export interface ITaskData {
-  id: number;
-  category: string;
+export interface IKickstarterProjectData {
+  "s.no": number;
+  "amt.pledged": number;
+  blurb: string;
+  by: string;
+  country: string;
+  currency: string;
+  "end.time": string;
+  location: string;
+  "percentage.funded": number;
+  "num.backers": string;
+  state: string;
   title: string;
-  status: string;
-  description: string;
-}
-
-class Hero {
-  constructor(arg1: any, arg2: any) {
-    a: arg1;
-    b: arg2;
-  }
+  type: string;
+  url: string;
 }
