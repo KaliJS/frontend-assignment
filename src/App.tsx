@@ -45,7 +45,7 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {!loading ? (
+          {loading ? (
             <LoadingRow />
           ) : (
             <>
